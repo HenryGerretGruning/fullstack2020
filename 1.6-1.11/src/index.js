@@ -21,6 +21,9 @@ const Statistics = (props) => {
     return (
     
       <div>
+      <Statistic text="good" value ={props.good} />
+      <Statistic text="neutral" value ={props.neutral} />
+      <Statistic text="bad" value ={props.bad} />
       <Statistic text="all" value ={all} />
       <Statistic text="average" value ={average} />
       <Statistic text="positive" value ={positive} />
@@ -53,9 +56,6 @@ const App = () => {
     <Button handleClick={() => setGood(good+1)} text="Good" />
     <Button handleClick={() => setNeutral(neutral+1)} text="Neutral" />
     <Button handleClick={() => setBad(bad+1)} text="Bad" />
-    <Statistic text="good" value ={good} />
-    <Statistic text="neutral" value ={neutral} />
-    <Statistic text="bad" value ={bad} />
     <Header title={title2} />
     <Statistics bad={bad} good={good} neutral={neutral}/>
     </div>
