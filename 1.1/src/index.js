@@ -12,19 +12,20 @@ const App = () => {
 
   return (
     <div>
-      <h1>{course}</h1>
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <Header course={course} />
+      <Content 
+      part1={part1} 
+      part2={part2}
+      part3={part3}
+      />
+      <Total 
+      exercise1={exercises1} 
+      exercise2={exercises2} 
+      exercise3={exercises3} 
+      />
     </div>
   )
+
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
